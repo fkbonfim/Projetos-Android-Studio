@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ProjetoFinal</string>
+    <string name="titulo">Cadastro Pessoa Física</string>
+    <string name="Versao">versao 0.1</string>
+    <string name="btinicial">Cadastrar Pessoa Física</string>
+    <string name="inserir">Cadastrar Dados</string>
+    <string name="listar">Mostrar Cadastrados</string>
+    <string name="voltar">Voltar</string>
+    <string name="nome">Nome: </string>
+    <string name="cpf">CPF: </string>
+    <string name="idade">Idade: </string>
+    <string name="telefone">Telefone: </string>
+    <string name="email">E-mail: </string>
+
+
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Projeto Final</string>
+    <string name="lado">Seja bem vindo!</string>
+    <string name="escolha">Escolha seu lado:</string>
+    <string name="Sith">DarkSide</string>
+    <string name="Jedi">LightSide</string>
+    <string name="aliar">Aliar</string>
+    <string name="ver">Ver aliados</string>
+    <string name="idade">Idade:</string>
+    <string name="altura">Altura:</string>
+    <string name="forca">Stange:</string>
+    <string name="agilidade">Agility:</string>
+    <string name="mana">Mana:</string>
+
+
+
+</resources>
