@@ -7,15 +7,10 @@ package br.com.franklin.afinal;
 public class Contato {
 
     private String nome;
-    private String endereco;
-    private String empresa;
-
-    Contato(String nome, String endereco, String empresa) {
-        this.nome = nome;
-        this.endereco = endereco;
-        this.empresa = empresa;
-
-    }
+    private String cpf;
+    private String idade;
+    private String telefone;
+    private String email;
 
 
     public String getNome() {
@@ -26,25 +21,45 @@ public class Contato {
         this.nome = nome;
     }
 
-
-    public String getEndereco() {
-
-        return endereco;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setEndereco(String endereco) {
-
-        this.endereco = endereco;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
-    public String getEmpresa() {
-
-        return empresa;
+    public String getIdade() {
+        return idade;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setIdade(String idade) {
+        this.idade = idade;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    Contato(String nome, String cpf, String idade, String telefone, String email) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.idade = idade;
+        this.telefone = telefone;
+        this.email = email;
+
+    }
 
 }

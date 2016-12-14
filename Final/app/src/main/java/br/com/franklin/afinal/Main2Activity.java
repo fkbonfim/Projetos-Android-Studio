@@ -1,7 +1,6 @@
 package br.com.franklin.afinal;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,7 +14,7 @@ public class Main2Activity extends AppCompatActivity {
 
     private DBHelper dh;
     Button btInserir, btListar;
-    EditText etNome, etEnd, etEmp;
+    EditText etNome, etCpf, etIdade, etTelefone, etEmail;
 
 
     @Override
@@ -26,10 +25,10 @@ public class Main2Activity extends AppCompatActivity {
         this.dh = new DBHelper(this);
 
         etNome = (EditText) findViewById(R.id.etnome);
-        etEnd = (EditText) findViewById(R.id.etcpf);
-        etEmp = (EditText) findViewById(R.id.etidade);
-        etEmp = (EditText) findViewById(R.id.ettelefone);
-        etEmp = (EditText) findViewById(R.id.etemail);
+        etCpf = (EditText) findViewById(R.id.etcpf);
+        etIdade = (EditText) findViewById(R.id.etidade);
+        etTelefone = (EditText) findViewById(R.id.ettelefone);
+        etEmail = (EditText) findViewById(R.id.etemail);
 
 
         btInserir = (Button) findViewById(R.id.btinserir);
@@ -38,10 +37,12 @@ public class Main2Activity extends AppCompatActivity {
         btInserir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (etNome.getText().length() > 0 && etEnd.getText().length() > 0 && etEmp.getText().length() > 0) {
+                if (etNome.getText().length() > 0 && etCpf.getText().length() > 0 && etIdade.getText().length() > 0
+                        && etTelefone.getText().length() > 0 && etEmail.getText().length() > 0) {
 
 
-                    dh.insert(etNome.getText().toString(), etEnd.getText().toString(), etEmp.getText().toString());
+                    dh.insert(etNome.getText().toString(), etCpf.getText().toString(), etIdade.getText().toString(),
+                            etTelefone.getText().toString(), etEmail.getText().toString());
 
                     AlertDialog.Builder adb = new AlertDialog.Builder(Main2Activity.this);
                     adb.setTitle("Sucesso");
@@ -49,8 +50,10 @@ public class Main2Activity extends AppCompatActivity {
                     adb.show();
 
                     etNome.setText("");
-                    etEnd.setText("");
-                    etEmp.setText("");
+                    etCpf.setText("");
+                    etIdade.setText("");
+                    etTelefone.setText("");
+                    etEmail.setText("");
 
                 } else {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Main2Activity.this);
@@ -59,8 +62,10 @@ public class Main2Activity extends AppCompatActivity {
                     adb.show();
 
                     etNome.setText("");
-                    etEnd.setText("");
-                    etEmp.setText("");
+                    etCpf.setText("");
+                    etIdade.setText("");
+                    etTelefone.setText("");
+                    etEmail.setText("");
 
                 }
 
@@ -84,7 +89,9 @@ public class Main2Activity extends AppCompatActivity {
                     Contato contato = (Contato) contatos.get(i);
                     AlertDialog.Builder adb = new AlertDialog.Builder(Main2Activity.this);
                     adb.setTitle("Regristro nº " + i);
-                    adb.setMessage("Nome: " + contato.getNome() + "\nEndereço: " + contato.getEndereco() + "\nEmpresa: " + contato.getEmpresa());
+                    adb.setMessage("Nome: " + contato.getNome() + "\nCPF: " + contato.getCpf() +
+                            "\nIdade: " + contato.getIdade() + "\nTelefone: " + contato.getTelefone() +
+                            "\nEmail: " + contato.getEmail());
                     adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

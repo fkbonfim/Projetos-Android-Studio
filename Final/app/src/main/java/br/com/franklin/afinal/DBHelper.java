@@ -25,7 +25,7 @@ public class DBHelper {
 
     private SQLiteStatement insertStmt;
     private static final String INSERT = "insert into " + TABLE_NAME +
-            " (nome, endereco, empresa) values (?,?,?)";
+            " (nome, cpf, idade, telefone, email) values (?,?,?,?,?)";
 
     public DBHelper(Context context) {
         this.context = context;
@@ -34,10 +34,12 @@ public class DBHelper {
         this.insertStmt = this.db.compileStatement(INSERT);
     }
 
-    public long insert(String nome, String endereco, String empresa) {
+    public long insert(String nome, String cpf, String idade, String telefone, String email) {
         this.insertStmt.bindString(1, nome);
-        this.insertStmt.bindString(2, endereco);
-        this.insertStmt.bindString(3, empresa);
+        this.insertStmt.bindString(2, cpf);
+        this.insertStmt.bindString(3, idade);
+        this.insertStmt.bindString(4, telefone);
+        this.insertStmt.bindString(5, email);
 
         return this.insertStmt.executeInsert();
     }
@@ -50,13 +52,13 @@ public class DBHelper {
         List<Contato> list = new ArrayList<Contato>();
 
         try {
-            Cursor cursor = this.db.query(TABLE_NAME, new String[]{"nome", "endereco", "empresa"},
+            Cursor cursor = this.db.query(TABLE_NAME, new String[]{"nome", "cpf", "idade", "telefone", "email"},
                     null, null, null, null, null, null);
             int nregistros = cursor.getCount();
             if (nregistros != 0) {
                 cursor.moveToFirst();
                 do {
-                    Contato contato = new Contato(cursor.getString(0), cursor.getString(1), cursor.getString(2));
+                    Contato contato = new Contato(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
                     list.add(contato);
 
                 } while (cursor.moveToNext());
@@ -79,7 +81,7 @@ public class DBHelper {
 
         public void onCreate(SQLiteDatabase db) {
             String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, "
-                    + "endereco TEXT, empresa TEXT);";
+                    + "cpf TEXT, idade TEXT, telefone TEXT, email TEXT);";
             db.execSQL(sql);
         }
 
