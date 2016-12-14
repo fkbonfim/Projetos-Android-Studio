@@ -21,8 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Seu novo Nome:" />
+            android:text="Nome:" />
 
         <EditText
             android:id="@+id/etnome"
@@ -32,11 +31,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="idade" />
+            android:text="CPF:" />
 
 
         <EditText
-            android:id="@+id/etendereco"
+            android:id="@+id/etcpf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -44,11 +43,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="altura"/>
+            android:text="Idade:"/>
 
 
         <EditText
-            android:id="@+id/etempresa"
+            android:id="@+id/etidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 

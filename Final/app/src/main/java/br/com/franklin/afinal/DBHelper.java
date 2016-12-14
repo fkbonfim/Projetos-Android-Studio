@@ -16,9 +16,9 @@ import java.util.List;
 public class DBHelper {
 
     //priavate atibuto privado, static estatico, final constante não vai mudar
-    private static final String DATABASE_NAME = "bd.db";
-    private static final int DATABASE_VERSION = 1;
-    private static final String TABLE_NAME = "nomes";
+    private static final String DATABASE_NAME = "bancodedados2.db";
+    private static final int DATABASE_VERSION = 2;
+    private static final String TABLE_NAME = "contato2";
 
     private Context context;
     private SQLiteDatabase db;

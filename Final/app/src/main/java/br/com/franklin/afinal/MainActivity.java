@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         this.dh = new DBHelper(this);
 
         etNome = (EditText) findViewById(R.id.etnome);
-        etEnd = (EditText) findViewById(R.id.etendereco);
-        etEmp = (EditText) findViewById(R.id.etempresa);
+        etEnd = (EditText) findViewById(R.id.etcpf);
+        etEmp = (EditText) findViewById(R.id.etidade);
 
         btInserir = (Button) findViewById(R.id.btinserir);
         btListar = (Button) findViewById(R.id.btlistar);
