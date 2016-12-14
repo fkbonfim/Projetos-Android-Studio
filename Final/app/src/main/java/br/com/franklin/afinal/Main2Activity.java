@@ -1,10 +1,10 @@
-package br.com.franklin.projetofinal;
+package br.com.franklin.afinal;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,45 +14,44 @@ import java.util.List;
 public class Main2Activity extends AppCompatActivity {
 
     private DBHelper dh;
-    Button btListar, btInserir, btVoltar;
-    EditText etNome, etCpf, etIdade, etTelefone, etEmail;
+    Button btInserir, btListar;
+    EditText etNome, etEnd, etEmp;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
 
         this.dh = new DBHelper(this);
 
         etNome = (EditText) findViewById(R.id.etnome);
-        etCpf = (EditText) findViewById(R.id.etcpf);
-        etIdade = (EditText) findViewById(R.id.etidade);
-        etTelefone = (EditText) findViewById(R.id.ettelefone);
-        etEmail = (EditText) findViewById(R.id.etemail);
+        etEnd = (EditText) findViewById(R.id.etcpf);
+        etEmp = (EditText) findViewById(R.id.etidade);
+        etEmp = (EditText) findViewById(R.id.ettelefone);
+        etEmp = (EditText) findViewById(R.id.etemail);
+
 
         btInserir = (Button) findViewById(R.id.btinserir);
         btListar = (Button) findViewById(R.id.btlistar);
-        btVoltar = (Button) findViewById(R.id.btvoltar);
 
         btInserir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (etNome.getText().length() > 0 && etCpf.getText().length() > 0 && etIdade.getText().length() > 0
-                        && etTelefone.getText().length() > 0 && etEmail.getText().length() > 0) {
+                if (etNome.getText().length() > 0 && etEnd.getText().length() > 0 && etEmp.getText().length() > 0) {
 
-                    dh.insert(etNome.getText().toString(), etCpf.getText().toString(), etIdade.getText().toString(),
-                            etTelefone.getText().toString(), etEmail.getText().toString());
+
+                    dh.insert(etNome.getText().toString(), etEnd.getText().toString(), etEmp.getText().toString());
+
                     AlertDialog.Builder adb = new AlertDialog.Builder(Main2Activity.this);
                     adb.setTitle("Sucesso");
                     adb.setMessage("Cadastro Realizado!");
                     adb.show();
 
                     etNome.setText("");
-                    etIdade.setText("");
-                    etTelefone.setText("");
-                    etEmail.setText("");
-                    etCpf.setText("");
+                    etEnd.setText("");
+                    etEmp.setText("");
+
                 } else {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Main2Activity.this);
                     adb.setTitle("Erro");
@@ -60,10 +59,8 @@ public class Main2Activity extends AppCompatActivity {
                     adb.show();
 
                     etNome.setText("");
-                    etIdade.setText("");
-                    etTelefone.setText("");
-                    etEmail.setText("");
-                    etCpf.setText("");
+                    etEnd.setText("");
+                    etEmp.setText("");
 
                 }
 
@@ -87,9 +84,7 @@ public class Main2Activity extends AppCompatActivity {
                     Contato contato = (Contato) contatos.get(i);
                     AlertDialog.Builder adb = new AlertDialog.Builder(Main2Activity.this);
                     adb.setTitle("Regristro nº " + i);
-                    adb.setMessage("Nome: " + contato.getNome() + "\nCPF: " + contato.getCpf() +
-                            "\nIdade: " + contato.getIdade() + "\nTelefone: " + contato.getTelefone() +
-                            "\nE-mail: " + contato.getEmail());
+                    adb.setMessage("Nome: " + contato.getNome() + "\nEndereço: " + contato.getEndereco() + "\nEmpresa: " + contato.getEmpresa());
                     adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -103,15 +98,6 @@ public class Main2Activity extends AppCompatActivity {
 
             }
         });
-
-        btVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Main2Activity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
     }
 }

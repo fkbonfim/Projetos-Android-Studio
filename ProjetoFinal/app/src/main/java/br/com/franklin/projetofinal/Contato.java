@@ -1,19 +1,15 @@
 package br.com.franklin.projetofinal;
 
-import java.lang.ref.SoftReference;
-
 /**
  * Created by Franklin on 04/12/2016.
  */
 
 public class Contato {
-
     private String nome;
     private String cpf;
     private String email;
     private String idade;
     private String telefone;
-
 
     public String getNome() {
         return nome;
@@ -21,14 +17,6 @@ public class Contato {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
     }
 
     public String getCpf() {
@@ -55,13 +43,21 @@ public class Contato {
         this.idade = idade;
     }
 
-    Contato(String nome, String telefone, String cpf, String email, String idade) {
-        this.nome = nome;
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    Contato(String nome, String cpf, String email, String idade, String telefone ) {
+        this.nome = nome;
         this.cpf = cpf;
         this.email = email;
-        this.idade = idade;
+        this.email = idade;
+        this.email = telefone;
 
     }
 
-    }
+}
