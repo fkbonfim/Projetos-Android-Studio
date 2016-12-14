@@ -9,30 +9,10 @@ import java.lang.ref.SoftReference;
 public class Contato {
 
     private String nome;
-    private String endereco;
-    private String empresa;
     private String cpf;
     private String email;
     private String idade;
     private String telefone;
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    Contato(String nome, String telefone, String cpf, String email, String idade) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.empresa = empresa;
-        this.cpf = cpf;
-        this.email = email;
-        this.idade = idade;
-
-    }
 
 
     public String getNome() {
@@ -43,26 +23,13 @@ public class Contato {
         this.nome = nome;
     }
 
-
-    public String getEndereco() {
-
-        return endereco;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setEndereco(String endereco) {
-
-        this.endereco = endereco;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
-
-    public String getEmpresa() {
-
-        return empresa;
-    }
-
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
-    }
-
 
     public String getCpf() {
         return cpf;
@@ -88,5 +55,13 @@ public class Contato {
         this.idade = idade;
     }
 
+    Contato(String nome, String telefone, String cpf, String email, String idade) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.email = email;
+        this.idade = idade;
 
-}
+    }
+
+    }

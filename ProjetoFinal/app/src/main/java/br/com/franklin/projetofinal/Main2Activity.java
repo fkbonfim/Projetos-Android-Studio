@@ -45,7 +45,7 @@ public class Main2Activity extends AppCompatActivity {
                 if (etNome.getText().length() > 0 && etCpf.getText().length() > 0 && etIdade.getText().length() > 0
                         && etTelefone.getText().length() > 0 && etEmail.getText().length() > 0) {
 
-
+                    //
                     dh.insert(etNome.getText().toString(), etCpf.getText().toString(), etIdade.getText().toString(),
                             etTelefone.getText().toString(), etEmail.getText().toString());
                     AlertDialog.Builder adb = new AlertDialog.Builder(Main2Activity.this);

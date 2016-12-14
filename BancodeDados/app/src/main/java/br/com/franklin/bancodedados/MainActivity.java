@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.dh = new DBHelper(this);
+
         etNome = (EditText) findViewById(R.id.etnome);
         etEnd = (EditText) findViewById(R.id.etendereco);
         etEmp = (EditText) findViewById(R.id.etempresa);

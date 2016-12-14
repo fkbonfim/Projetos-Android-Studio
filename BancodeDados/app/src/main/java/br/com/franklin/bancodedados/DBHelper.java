@@ -25,7 +25,8 @@ public class DBHelper {
     private SQLiteDatabase db;
 
     private SQLiteStatement insertStmt;
-    private static final String INSERT = "insert into " + TABLE_NAME + " (nome, endereco, empresa) values (?,?,?)";
+    private static final String INSERT = "insert into " + TABLE_NAME +
+            " (nome, endereco, empresa) values (?,?,?)";
 
     public DBHelper(Context context) {
         this.context = context;

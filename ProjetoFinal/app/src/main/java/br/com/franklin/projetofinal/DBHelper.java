@@ -14,6 +14,7 @@ import java.util.List;
  */
 
 public class DBHelper {
+
     //priavate atibuto privado, static estatico, final constante não vai mudar
     private static final String DATABASE_NAME = "bancodedados.db";
     private static final int DATABASE_VERSION = 1;
@@ -23,7 +24,8 @@ public class DBHelper {
     private SQLiteDatabase db;
 
     private SQLiteStatement insertStmt;
-    private static final String INSERT = "insert into " + TABLE_NAME + " (nome, cpf, idade, telefone, email) values (?,?,?,?,?)";
+    private static final String INSERT = "insert into " + TABLE_NAME +
+            " (nome, cpf, idade, telefone, email) values (?,?,?,?,?)";
 
     public DBHelper(Context context) {
         this.context = context;
@@ -88,6 +90,3 @@ public class DBHelper {
             onCreate(db);
         }
     }
-
-
-}
