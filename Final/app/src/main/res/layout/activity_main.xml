@@ -4,10 +4,11 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="br.com.franklin.afinal.MainActivity">
 
     <LinearLayout
@@ -20,8 +21,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome:"
-            android:textColor="#111111" />
+            android:layout_marginTop="50dp"
+            android:text="Seu novo Nome:" />
 
         <EditText
             android:id="@+id/etnome"
@@ -31,8 +32,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CPF:"
-            android:textColor="#111111" />
+            android:text="idade" />
 
 
         <EditText
@@ -44,46 +44,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Idade:"
-            android:textColor="#111111" />
+            android:text="altura"/>
 
 
         <EditText
             android:id="@+id/etempresa"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Telefone:"
-            android:textColor="#111111" />
 
-
-        <EditText
-            android:id="@+id/ettelefone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="email"
-            android:textColor="#111111" />
-
-
-        <EditText
-            android:id="@+id/etemail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            />
 
         <Button
             android:id="@+id/btinserir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:text="aliar"
             android:textStyle="bold" />
 
@@ -92,16 +68,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:text="ver"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btvoltar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Voltar"
-            android:textColor="#111111"
             android:textStyle="bold" />
 
     </LinearLayout>

@@ -9,15 +9,11 @@ public class Contato {
     private String nome;
     private String endereco;
     private String empresa;
-    private String telefone;
-    private String email;
 
-    Contato(String nome, String endereco, String empresa, String telefone, String email) {
+    Contato(String nome, String endereco, String empresa) {
         this.nome = nome;
         this.endereco = endereco;
         this.empresa = empresa;
-        this.telefone = telefone;
-        this.email = email;
 
     }
 
@@ -49,26 +45,6 @@ public class Contato {
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
-
-    public String getTelefone() {
-
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-
-    public String getEmail() {
-
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
 
 
 }
