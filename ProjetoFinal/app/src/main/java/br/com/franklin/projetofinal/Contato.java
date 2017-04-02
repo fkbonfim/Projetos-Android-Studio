@@ -11,6 +11,17 @@ public class Contato {
     private String idade;
     private String telefone;
 
+
+    Contato(String nome, String cpf, String email, String idade, String telefone) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.email = idade;
+        this.email = telefone;
+
+    }
+
+
     public String getNome() {
         return nome;
     }
@@ -51,13 +62,5 @@ public class Contato {
         this.telefone = telefone;
     }
 
-    Contato(String nome, String cpf, String email, String idade, String telefone ) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.email = email;
-        this.email = idade;
-        this.email = telefone;
-
-    }
 
 }

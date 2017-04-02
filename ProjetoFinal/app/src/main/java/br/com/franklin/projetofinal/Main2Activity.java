@@ -25,16 +25,19 @@ public class Main2Activity extends AppCompatActivity {
 
         this.dh = new DBHelper(this);
 
+        //referenciando edit tex da activity
         etNome = (EditText) findViewById(R.id.etnome);
         etCpf = (EditText) findViewById(R.id.etcpf);
         etIdade = (EditText) findViewById(R.id.etidade);
         etTelefone = (EditText) findViewById(R.id.ettelefone);
         etEmail = (EditText) findViewById(R.id.etemail);
 
+        //referenciando botões da activity
         btInserir = (Button) findViewById(R.id.btinserir);
         btListar = (Button) findViewById(R.id.btlistar);
         btVoltar = (Button) findViewById(R.id.btvoltar);
 
+        //botão cadastrar dados
         btInserir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,6 +73,8 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+
+        //botão listar dados cadastrados
         btListar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,6 +109,7 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        //botão voltar a primeira tela
         btVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

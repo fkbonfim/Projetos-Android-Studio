@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjetoFinal</string>
+    <string name="app_name">Projeto Final</string>
     <string name="titulo">Cadastro Pessoa Física</string>
     <string name="Versao">versao 0.1</string>
     <string name="btinicial">Cadastrar Pessoa Física</string>
