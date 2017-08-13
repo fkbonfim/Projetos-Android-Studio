@@ -10,19 +10,19 @@
 
     <ImageView
 
+        android:id="@+id/imageView"
         android:layout_width="136dp"
         android:layout_height="114dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-
         android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -35,14 +35,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_weight="0.10"
             android:background="#ffffff"
             android:orientation="vertical">
 
 
             <EditText
-                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="E-mail:"
@@ -50,7 +51,8 @@
                 android:textColorHint="@color/colorPrimary" />
 
             <EditText
-                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:autoText="true"
                 android:ems="10"
@@ -58,25 +60,49 @@
                 android:inputType="textPassword"
                 android:textColorHint="@color/colorPrimary" />
 
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="horizontal">
 
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_weight="1
+"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Lembrar-me"
+                    android:textSize="10sp" />
+
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Esqueceu a senha?"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:background="@color/colorPrimary"
             android:orientation="vertical"
             android:weightSum="1">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#000000"></LinearLayout>
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="36dp"
                 android:layout_gravity="center"
                 android:background="@color/colorPrimary"
@@ -85,44 +111,27 @@
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#000000"></LinearLayout>
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:clickable="true"
-                android:text="Recuperar Senha"
                 android:textColor="#ffffff"
-                android:textIsSelectable="true"
-                android:textSize="15sp" />
+                android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#000000"></LinearLayout>
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Facebook" />
+
 
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_gravity="center_horizontal"
-            android:background="#3B5998"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:text="F"
-            android:textColor="#ffffff"
-            android:textStyle="bold" />
+
 
     </LinearLayout>
+
+
 
 
 </LinearLayout>
